@@ -7,13 +7,19 @@ import (
 
 	"github.com/mafuyuk/ddd-go-api-template/domain"
 	"github.com/mafuyuk/ddd-go-api-template/domain/repository"
+	"github.com/mafuyuk/ddd-go-api-template/infrastructure/db"
 )
 
-func NewUserRepository() repository.UserRepository {
-	return &userRepository{}
+func NewUserRepository(dbmClient *db.Client, dbsClient *db.Client) repository.UserRepository {
+	return &userRepository{
+		dbm: dbmClient,
+		dbs: dbsClient,
+	}
 }
 
 type userRepository struct {
+	dbm *db.Client
+	dbs *db.Client
 }
 
 func (r *userRepository) WithTransaction(ctx context.Context, txFunc func(*sql.Tx) error) error {
