@@ -22,6 +22,7 @@ require (
 	github.com/mgutz/to v1.0.0
 	github.com/nozzle/throttler v0.0.0-20180817012639-2ea982251481
 	github.com/pressly/chi v1.0.0
+	github.com/rs/xid v1.2.0
 	github.com/stretchr/testify v1.2.2
 	github.com/unrolled/render v0.0.0-20180807193321-4206df6ff701
 	golang.org/x/crypto v0.0.0-20180820150726-614d502a4dac

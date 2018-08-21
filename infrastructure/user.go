@@ -4,7 +4,6 @@ import (
 	"context"
 	"database/sql"
 	"log"
-	"time"
 
 	"github.com/mafuyuk/ddd-go-api-template/domain"
 	"github.com/mafuyuk/ddd-go-api-template/domain/repository"
@@ -50,10 +49,6 @@ func (r *userRepository) Get(domain.UserID) (*domain.User, error) {
 
 func (r *userRepository) Create(user *domain.User) error {
 	log.Println("called infrastructure Create")
-	now := int(time.Now().Unix())
-	user.CreatedAt = now
-	user.UpdatedAt = now
-
 	// Exec Create
 	_, err := sq.Insert("users").
 		Columns("id", "name", "created_at", "updated_at").
