@@ -6,7 +6,7 @@
   port     = ":3306"
   user     = "user"
   password = "pass"
-  dbname   = "dbname"
+  dbname   = "demo"
 
 [dbs]
   host     = "db"
@@ -16,7 +16,7 @@
   dbname   = "demo"
 
 [redis]
-  host                     = "cache"
+  host                     = "redis"
   port                     = ":6379"
   pool_max_idle            = 3
   pool_idle_timeout_second = 240

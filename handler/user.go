@@ -54,7 +54,7 @@ func (s *Server) registerUser(w http.ResponseWriter, r *http.Request) {
 		Name:        requestData.Name,
 		Description: requestData.Description,
 	}
-	if err := s.UserService.Register(user); err != nil {
+	if err := s.UserService.Register(ctx, user); err != nil {
 		rendering.JSON(w, http.StatusInternalServerError, &responseError{
 			RequestID: requestID,
 			Reason:    "Failed UserService.Register.",

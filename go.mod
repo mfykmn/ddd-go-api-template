@@ -10,8 +10,12 @@ require (
 	github.com/go-playground/universal-translator v0.16.0
 	github.com/go-sql-driver/mysql v1.4.0
 	github.com/howeyc/gopass v0.0.0-20170109162249-bf9dde6d0d2c
+	github.com/lann/builder v0.0.0-20180802200727-47ae307949d0
+	github.com/lann/ps v0.0.0-20150810152359-62de8c46ede0
+	github.com/lib/pq v0.0.0-20180523175426-90697d60dd84
 	github.com/mattn/go-colorable v0.0.9
 	github.com/mattn/go-isatty v0.0.3
+	github.com/mattn/go-sqlite3 v1.9.0
 	github.com/mgutz/ansi v0.0.0-20170206155736-9520e82c474b
 	github.com/mgutz/minimist v0.0.0-20151219120022-39eb8cf573ca
 	github.com/mgutz/str v1.2.0
@@ -25,6 +29,7 @@ require (
 	golang.org/x/sys v0.0.0-20180821044426-4ea2f632f6e9
 	golang.org/x/text v0.3.0
 	google.golang.org/appengine v1.1.0
+	gopkg.in/Masterminds/squirrel.v1 v1.0.0-20170825200431-a6b93000bd21
 	gopkg.in/go-playground/assert.v1 v1.2.1
 	gopkg.in/go-playground/validator.v9 v9.21.0
 	gopkg.in/godo.v2 v2.0.9
