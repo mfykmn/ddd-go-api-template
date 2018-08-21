@@ -18,6 +18,7 @@
 ├── domain
 │     * DDDでいうドメイン
 │     * どこにも依存してはいけない
+│     * 共通のものをまとめるというより、entity定義やそれに付随するロジック、interface定義などを置く
 ├── handler
 │   │ * HTTPのハンドラ
 │   └── middleware
