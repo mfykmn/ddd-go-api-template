@@ -51,8 +51,8 @@ func (r *userRepository) Create(user *domain.User) error {
 	log.Println("called infrastructure Create")
 	// Exec Create
 	_, err := sq.Insert("users").
-		Columns("id", "name", "created_at", "updated_at").
-		Values(user.ID, user.Name, user.CreatedAt, user.UpdatedAt).
+		Columns("id", "name", "description", "created_at", "updated_at").
+		Values(user.ID, user.Name, user.Description, user.CreatedAt, user.UpdatedAt).
 		RunWith(r.dbm.DB).
 		Exec()
 	return err
