@@ -1,3 +1,7 @@
 # Golang
+## development
 vendor/
+Gododir/godobin*
+
+## production
 bin/
