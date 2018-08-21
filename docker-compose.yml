@@ -1,0 +1,32 @@
+version: '3'
+services:
+  app:
+    image: golang:1.10
+    volumes:
+    - .:/go/src/github.com/mafuyuk/ddd-go-api-template
+    working_dir: /go/src/github.com/mafuyuk/ddd-go-api-template
+    command: |
+      bash -c " \
+      echo "--------------サーバー起動--------------" && \
+      go get -u gopkg.in/godo.v2/cmd/godo && \
+      godo server --watch"
+    ports:
+    - 8080:8080
+    depends_on:
+    - db
+    - redis
+
+  db:
+    image: mysql:5.7
+    environment:
+    - MYSQL_ROOT_PASSWORD=root
+    - MYSQL_DATABASE=demo
+    - MYSQL_USER=user
+    - MYSQL_PASSWORD=pass
+    ports:
+    - 3306:3306
+
+  redis:
+    image: redis:4.0
+    ports:
+    - 6379:6379

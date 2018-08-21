@@ -2,18 +2,31 @@ module github.com/mafuyuk/ddd-go-api-template
 
 require (
 	github.com/BurntSushi/toml v0.3.0
+	github.com/MichaelTJones/walk v0.0.0-20161122175330-4748e29d5718
 	github.com/eknkc/amber v0.0.0-20171010120322-cdade1c07385
 	github.com/go-chi/chi v0.0.0-20171222161133-e83ac2304db3
 	github.com/go-chi/cors v1.0.0
 	github.com/go-playground/locales v0.12.1
 	github.com/go-playground/universal-translator v0.16.0
 	github.com/go-sql-driver/mysql v1.4.0
+	github.com/howeyc/gopass v0.0.0-20170109162249-bf9dde6d0d2c
+	github.com/mattn/go-colorable v0.0.9
+	github.com/mattn/go-isatty v0.0.3
+	github.com/mgutz/ansi v0.0.0-20170206155736-9520e82c474b
+	github.com/mgutz/minimist v0.0.0-20151219120022-39eb8cf573ca
+	github.com/mgutz/str v1.2.0
+	github.com/mgutz/to v1.0.0
+	github.com/nozzle/throttler v0.0.0-20180817012639-2ea982251481
 	github.com/pressly/chi v1.0.0
 	github.com/stretchr/testify v1.2.2
 	github.com/unrolled/render v0.0.0-20180807193321-4206df6ff701
+	golang.org/x/crypto v0.0.0-20180820150726-614d502a4dac
 	golang.org/x/net v0.0.0-20180821023952-922f4815f713
+	golang.org/x/sys v0.0.0-20180821044426-4ea2f632f6e9
 	golang.org/x/text v0.3.0
 	google.golang.org/appengine v1.1.0
 	gopkg.in/go-playground/assert.v1 v1.2.1
 	gopkg.in/go-playground/validator.v9 v9.21.0
+	gopkg.in/godo.v2 v2.0.9
+	gopkg.in/stretchr/testify.v1 v1.2.2
 )
