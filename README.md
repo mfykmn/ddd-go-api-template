@@ -1,1 +1,1 @@
-# ddd-api
+# GolangのDDDに沿ったAPI Template
