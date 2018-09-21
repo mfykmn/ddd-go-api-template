@@ -54,7 +54,7 @@
 [こちらをご覧ください](https://documenter.getpostman.com/view/2534584/RWTpswZX)
 
 ## 🌐 動作環境 
-* Golang v1.10.0
+* Golang v1.11.0
 * Docker Latest Version
 
 ## ▶️ 実行方法

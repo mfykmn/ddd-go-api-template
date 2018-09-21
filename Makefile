@@ -1,12 +1,11 @@
 HAVE_GOLINT:=$(shell which golint)
-HAVE_VGO:=$(shell which vgo)
 HAVE_MIGRATE:=$(shell which migrate)
 
 ## Go
 .PHONY: setup lint test build run
-setup: vgo
+setup:
 	@echo "Start setup"
-	@vgo mod -vendor
+	@env GO111MODULE=on go mod vendor
 
 lint: setup golint
 	@echo "Check lint"
@@ -15,11 +14,11 @@ lint: setup golint
 
 test: setup
 	@echo "go test"
-	@vgo test
+	@go test
 
 build: setup
 	@echo "build"
-	@GOOS=linux GOARCH=amd64 CGO_ENABLED=0 vgo build -o ./bin/api ./cmd/api
+	@GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -o ./bin/api ./cmd/api
 
 run: setup
 	@echo "go run"
@@ -58,13 +57,7 @@ dmigrate: migrate
 	@migrate -path ./_sql -database 'mysql://root:root@tcp(0.0.0.0:3306)/demo' -verbose up
 
 ## Install package
-.PHONY: vgo golint migrate
-vgo:
-ifndef HAVE_VGO
-	@echo "Installing vgo"
-	@go get -u golang.org/x/vgo
-endif
-
+.PHONY: golint migrate
 golint:
 ifndef HAVE_GOLINT
 	@echo "Installing linter"
