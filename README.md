@@ -1,7 +1,8 @@
 # GolangのDDDに沿ったAPI Template
 
 ## 📌 概要
-### ディレクトリ構成について
+<details><summary>ディレクトリ構成について</summary><br><pre>
+
 ```
 .
 ├── _sql
@@ -49,6 +50,8 @@
 └── library
       * 汎用性の高いプログラムを１つのパッケージとして提供できるようにしたもの
 ```
+
+</pre></details>
 
 ### API仕様書
 [こちらをご覧ください](https://documenter.getpostman.com/view/2534584/RWTpswZX)
