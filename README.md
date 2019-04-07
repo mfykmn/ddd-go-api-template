@@ -5,6 +5,9 @@
 
 ```
 .
+├── _seeds
+│     * 初期データをCSV形式で格納する
+│
 ├── _sql
 │     * マイグレーション対象のクエリを格納する
 │
@@ -19,9 +22,13 @@
 │     * 設定値を読み込み構造体に格納する
 │
 ├── cmd
-│   └── api
-│       └── main.go
-│             * エントリーポイント
+│   ├── api
+│   │   └── main.go
+│   │         * APIエントリーポイント
+│   │
+│   └── seed
+│       └── main.go
+│             * Seedコマンドエントリーポイント
 │ 
 ├── domain
 │   │ * DDDでいうドメイン
@@ -61,10 +68,11 @@
 * Docker Latest Version
 
 ## ▶️ 実行方法
-### 環境立ち上げ
+### テスト環境立ち上げ
 ```
-$ make dstart
-$ make dmigrate
+$ make dstart   // 環境立ち上げ
+$ make dmigrate // データ構造のマイグレーション実行
+$ make seed     // テスト用初期データ投入
 ```
 
 ### API呼び出し
