@@ -30,5 +30,5 @@ func NewMySQL(config *config.DB) (*Client, error) {
 }
 
 func (c *Client) Close() {
-	c.Close()
+	c.DB.Close()
 }
