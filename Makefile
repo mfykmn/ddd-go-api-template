@@ -2,7 +2,7 @@ HAVE_GOLINT:=$(shell which golint)
 HAVE_MIGRATE:=$(shell which migrate)
 
 ## Go
-.PHONY: setup lint test build run
+.PHONY: setup lint test build run seed
 setup:
 	@echo "Start setup"
 	@env GO111MODULE=on go mod vendor
@@ -23,6 +23,9 @@ build: setup
 run: setup
 	@echo "go run"
 	@go run ./cmd/api/main.go -c ./_tools/local/api.toml
+
+seed: setup
+	@go run ./cmd/seed/*
 
 ## Docker local
 CONTAINER_PREFIX:=ddd-go-api-template
