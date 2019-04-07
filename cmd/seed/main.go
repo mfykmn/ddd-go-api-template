@@ -13,7 +13,7 @@ import (
 func main() {
 	var dbConf = &config.DB{}
 	flag.StringVar(&dbConf.Host, "h", "0.0.0.0", "DB host.")
-	flag.StringVar(&dbConf.Port, "P", "3306", "DB port.")
+	flag.StringVar(&dbConf.Port, "P", ":3306", "DB port.")
 	flag.StringVar(&dbConf.User, "u", "user", "DB user.")
 	flag.StringVar(&dbConf.Password, "p", "pass", "DB password.")
 	flag.StringVar(&dbConf.DBName, "n", "demo", "DB name.")
